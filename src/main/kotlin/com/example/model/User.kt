@@ -1,9 +1,8 @@
 package com.example.model
 
-@kotlinx.serialization.Serializable
 data class User(
-    val id: String,
-    val userName: String,
+    val id: Int,
+    val username: String,
     val password: String,
-    val authority: Authority
+    val authority: String
 )

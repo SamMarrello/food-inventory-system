@@ -10,6 +10,6 @@ val database = Database.connect(
     url = "jdbc:mysql://localhost:3306/ktorm",
     driver = "com.mysql.jdbc.Driver",
     user = "root",
-    password = "$password",
+    password = password,
     logger = ConsoleLogger(threshold = LogLevel.INFO)
 )
