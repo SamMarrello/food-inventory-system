@@ -1,6 +1,6 @@
 package com.example.repository
 
-import com.example.model.DBConnection
+import com.example.model.DBHelper
 import com.example.model.Warehouse
 import org.ktorm.database.Database
 

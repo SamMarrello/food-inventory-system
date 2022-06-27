@@ -1,6 +1,7 @@
 package com.example.database
 
 import com.example.model.DBConnection
+import com.example.model.DBHelper
 import org.ktorm.database.Database
 import org.ktorm.entity.Entity
 import org.ktorm.entity.sequenceOf
@@ -9,7 +10,7 @@ import org.ktorm.schema.Table
 import org.ktorm.schema.int
 import org.ktorm.schema.varchar
 
-private val database: Database = DBConnection()
+private val database: Database = DBHelper.
 
 object WarehouseTable: Table<WarehouseEntity>("warehouses") {
     val id = int("id").primaryKey().bindTo { it.id }
