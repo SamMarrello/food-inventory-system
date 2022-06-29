@@ -13,5 +13,8 @@ fun Application.configureRouting() {
     install(AutoHeadResponse)
 
     routing {
+        get("/") {
+            call.respond("Hello, world!")
+        }
     }
 }

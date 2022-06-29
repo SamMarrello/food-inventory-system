@@ -36,3 +36,4 @@ out/
 .vscode/
 
 /src/main/kotlin/com/example/database/secrets.kt
+.env
