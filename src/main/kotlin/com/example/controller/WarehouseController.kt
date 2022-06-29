@@ -27,10 +27,22 @@ fun Application.warehouseController() {
                 )
                 return@get
             }
-            call.respond(warehouseRepo.getWarehouse(id?))
+            val warehouse = warehouseRepo.getWarehouse(id)
+
+            if (id == null) {
+                call.respond(
+                    HttpStatusCode.NotFound,
+                    "found no warehouse under that id"
+                )
+            }
+            else {
+                TODO()
+                //call.respond(warehouse)
+            }
         }
 
         post("/warehouse") {
+
             val draft = call.receive<WarehouseDraft>()
             val warehouse = warehouseRepo.addWarehouse(draft)
             call.respond(warehouse)
@@ -46,8 +58,9 @@ fun Application.warehouseController() {
                 )
                 return@put
             }
+
             val draft = call.receive<WarehouseDraft>()
-            val update = (warehouseRepo.updateWarehouse(id, draft))
+            val update = warehouseRepo.updateWarehouse(id, draft)
 
             if (update) {
                 call.respond(HttpStatusCode.OK)
@@ -68,6 +81,7 @@ fun Application.warehouseController() {
                 )
                 return@delete
             }
+
             val update = warehouseRepo.deleteWarehouse(id)
 
             if (update) {
