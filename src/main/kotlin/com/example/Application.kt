@@ -1,5 +1,7 @@
 package com.example
 
+import com.example.controller.itemController
+import com.example.controller.login
 import com.example.controller.storeController
 import com.example.controller.warehouseController
 import io.ktor.server.engine.*
@@ -15,5 +17,7 @@ fun main() {
         configureSecurity()
         warehouseController()
         storeController()
+        itemController()
+        login()
     }.start(wait = true)
 }

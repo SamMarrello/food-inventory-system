@@ -13,11 +13,11 @@ fun Application.storeController() {
     val storeRepo = StoreRepository()
 
     routing {
-        get("/stores") {
+        get("/store") {
 
         }
 
-        get("/stores/{id}") {
+        get("/store/{id}") {
             val id = call.parameters["id"]?.toIntOrNull()
 
             if (id == null) {
@@ -29,11 +29,11 @@ fun Application.storeController() {
             }
         }
 
-        post("/stores") {
+        post("/store") {
             val draft = call.receive<StoreDraft>()
         }
 
-        put("/stores/{id}") {
+        put("/store/{id}") {
             val id = call.parameters["id"]?.toIntOrNull()
 
             if (id == null) {
@@ -45,7 +45,7 @@ fun Application.storeController() {
             }
         }
 
-        delete("/stores/{id}") {
+        delete("/store/{id}") {
             val id = call.parameters["id"]?.toIntOrNull()
 
             if (id == null) {
