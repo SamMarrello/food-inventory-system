@@ -9,13 +9,13 @@ import io.ktor.server.netty.*
 import com.example.plugins.*
 
 fun main() {
-    embeddedServer(Netty, port = 8080, host = "localhost") {
+    embeddedServer(Netty, port = 5000, host = "localhost") {
+        configureTemplates()
         configureMonitoring()
-        configureHTTP()
+        //configureHTTP()
         configureRouting()
         configureSerialization()
         configureSecurity()
-        configureTemplates()
         warehouseController()
         storeController()
         itemController()

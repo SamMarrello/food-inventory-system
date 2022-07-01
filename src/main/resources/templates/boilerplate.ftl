@@ -3,9 +3,9 @@
 <#macro boilerplate>
     <html lang="en">
     <head>
-        <title>${title}</title>
-        <link rel="stylesheet" href="../styling/style.css">
-        <script src="../styling/script.ts"></script>
+        <title>Inventorio</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <script src="/static/js/script.ts"></script>
     </head>
     <body>
     <#nested>
