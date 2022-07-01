@@ -15,6 +15,7 @@ fun main() {
         configureRouting()
         configureSerialization()
         configureSecurity()
+        configureTemplates()
         warehouseController()
         storeController()
         itemController()

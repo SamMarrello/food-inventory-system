@@ -8,7 +8,7 @@ import org.ktorm.logging.LogLevel
 open class DBHelper {
 
     val database: Database = Database.connect(
-        url = "jdbc:mysql://localhost:3306/ktorm",
+        url = "jdbc:mysql://localhost:3306/inventory",
         driver = "com.mysql.jdbc.Driver",
         user = "root",
         password = password,
