@@ -26,6 +26,7 @@ dependencies {
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
     implementation("org.ktorm:ktorm-core:3.5.0")
     //https://mvnrepository.com/artifact/org.ktorm/ktorm-support-mysql
+    implementation("io.ktor:ktor-server-freemarker:$ktor_version")
     implementation("io.ktor:ktor-server-auth:$ktor_version")
     implementation("io.ktor:ktor-server-auth-jwt:$ktor_version")
     implementation("org.ktorm:ktorm-support-mysql:3.5.0")
