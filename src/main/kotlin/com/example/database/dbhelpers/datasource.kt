@@ -9,7 +9,7 @@ open class DBHelper {
 
     val database: Database = Database.connect(
         url = "jdbc:mysql://localhost:3306/inventory",
-        driver = "com.mysql.jdbc.Driver",
+        driver = "com.mysql.cj.jdbc.Driver",
         user = "root",
         password = password,
         logger = ConsoleLogger(threshold = LogLevel.INFO)
