@@ -6,11 +6,11 @@ import org.ktorm.schema.int
 import org.ktorm.schema.varchar
 
 object WarehouseTable: Table<WarehouseEntity>("warehouses") {
-    val id = int("id").primaryKey().bindTo { it.id }
+    val id = int("warehouseId").primaryKey().bindTo { it.id }
     val name = varchar("w_name").bindTo { it.name }
     val location = varchar("w_location").bindTo { it.location }
-    val firstNameContact = varchar("firstNameContact").bindTo { it.firstNameContact }
-    val lastNameContact = varchar("lastNameContact").bindTo { it.lastNameContact }
+    val firstNameContact = varchar("w_firstNameContact").bindTo { it.firstNameContact }
+    val lastNameContact = varchar("w_lastNameContact").bindTo { it.lastNameContact }
     val phoneNumber = int("phoneNumber").bindTo { it.phoneNumber }
 }
 

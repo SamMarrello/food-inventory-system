@@ -10,7 +10,7 @@ object ItemTable: Table<ItemEntity>("items") {
     val amount = int("amount").bindTo { it.amount }
     val name = varchar("name").bindTo { it.name }
     val expires = boolean("expires").bindTo { it.expires }
-    //val expiry = datetime("expiry").bindTo { it.expiry }
+    val expiry = datetime("expiry").bindTo { it.expiry }
 }
 
 interface ItemEntity: Entity<ItemEntity> {
@@ -21,7 +21,7 @@ interface ItemEntity: Entity<ItemEntity> {
     val amount: Int
     val name: String
     val expires: Boolean
-    //val expiry: String?
+    val expiry: DateSqlType?
     //val warehouseLocation: Warehouse?
     //val storeLocation: Store?
 }

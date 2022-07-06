@@ -6,12 +6,12 @@ import org.ktorm.schema.int
 import org.ktorm.schema.varchar
 
 object StoreTable: Table<StoreEntity>("stores") {
-    val id = int("id").primaryKey().bindTo { it.id }
-    val name = varchar("w_name").bindTo { it.name }
-    val location = varchar("w_location").bindTo { it.location }
-    val firstNameContact = varchar("firstNameContact").bindTo { it.firstnameContact }
-    val lastNameContact = varchar("lastNameContact").bindTo { it.lastnameContact }
-    val phoneNumber = int("phoneNumber").bindTo { it.phoneNumber }
+    val id = int("storeId").primaryKey().bindTo { it.id }
+    val name = varchar("s_name").bindTo { it.name }
+    val location = varchar("s_location").bindTo { it.location }
+    val firstNameContact = varchar("s_firstNameContact").bindTo { it.firstnameContact }
+    val lastNameContact = varchar("s_lastNameContact").bindTo { it.lastnameContact }
+    val phoneNumber = int("s_phoneNumber").bindTo { it.phoneNumber }
     val specialization = varchar("specialization").bindTo { it.specialization }
 }
 
